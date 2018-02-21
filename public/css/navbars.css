@@ -30,6 +30,7 @@
   margin-left: -250px;
   overflow-y: auto;
   background: #fff;
+  border-right: 1px solid #dee2e6!important;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
