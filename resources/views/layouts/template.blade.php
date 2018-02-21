@@ -30,7 +30,7 @@
                       <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                      <a class="navbar-brand" href="#" style="width: 210px;">
+                      <a class="navbar-brand" href="#" style="    width: 210px;">
                         @if(auth::user()->users_type_id == 1)
                           Administration
                           @elseif(auth::user()->users_type_id == 2)
