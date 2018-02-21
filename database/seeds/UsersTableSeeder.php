@@ -57,7 +57,7 @@ class UsersTableSeeder extends Seeder
                 'card_picture' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd_nySYgvYJrWrRbDDBoo1izr89qHXzS_GujLRyi2JcrDv3QVmrQ',
                 'profile_picture' =>'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd_nySYgvYJrWrRbDDBoo1izr89qHXzS_GujLRyi2JcrDv3QVmrQ',
                 'phone_number' => '87272727',
-                'users_type_id' => 3,
+                'users_type_id' => 4,
                 'password' => bcrypt('supervisor'),
             ],
         ];

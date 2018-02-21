@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <script>
         window.Laravel = {!! json_encode([
@@ -17,12 +17,101 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{{ asset('css/navbars.css') }}" rel="stylesheet">
+    
 
 </head>
 <body>
     <div id="app">
       <div class="navbar_pointage">
-         @include('partials.navbar')
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                      <a class="navbar-brand" href="#">
+                        @if(auth::user()->users_type_id == 1)
+                          Administration
+                          @elseif(auth::user()->users_type_id == 2)
+                          Modérateur
+                          @elseif(auth::user()->users_type_id == 3)
+                          Public
+                          @elseif(auth::user()->users_type_id == 4)
+                          Superviseur
+                        @endif
+                
+                      </a>
+                      <ul class="navbar-nav mr-auto mt-1 mt-lg-0">
+                        <li class="nav-item active">
+                          <a class="fa fa-bars fa-2x nav-link mt-2 " id="menu-toggle" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="form-inline nav-link my-2 my-lg-0">
+                              
+                              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                              {{-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> --}}
+                            </form>
+                        </li>
+                      </ul>
+                      <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa-2x fa fa-bell-o"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fa fa-envelope-o fa-2x"></i></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa-2x fa fa-user-o"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                        Se déconnecter
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                  </nav>
+                
+                  <div id="wrapper">
+                
+                    <!-- Sidebar -->
+                    <div id="sidebar-wrapper">
+                        <ul class="sidebar-nav border-right">
+                            <li class="sidebar-brand">
+                                <a href="#">
+                                    Navigation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-2x fa fa-user-o"></i>  Elèves</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa-2x fa fa-suitcase"></i>  Professeurs</a>
+                            </li>
+            
+                        </ul>
+                    </div>
+                    <!-- /#sidebar-wrapper -->
+                
+                    <!-- Page Content -->
+                    <div id="page-content-wrapper">
+                        <div class="container-fluid">
+                            @yield('content')
+                        </div>
+                    </div>
+                    <!-- /#page-content-wrapper -->
+                
+                </div>
+                <!-- /#wrapper -->
       </div>
     </div>
 
@@ -51,8 +140,11 @@
                     {{ session('warning') }}
                 </div>
             @endif
-
-            @yield('content')
+            {{-- <div id="main-content">
+                <div class="container">
+                    @yield('content')
+                </div>
+            </div> --}}
 
         </div>
 
@@ -60,6 +152,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
 
 </body>
 </html>
