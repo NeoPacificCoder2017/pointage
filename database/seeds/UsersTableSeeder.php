@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
                 'card_picture' => 'http://www.littlehearts.ind.in/wp-content/themes/lhs/Birthday/images/adm.png',
                 'profile_picture' =>'http://www.littlehearts.ind.in/wp-content/themes/lhs/Birthday/images/adm.png',
                 'phone_number' => '87272727',
-                'role_id' => 1,
+                'users_type_id' => 1,
                 'password' => bcrypt('administrator'),
             ],
             [
@@ -33,7 +33,7 @@ class UsersTableSeeder extends Seeder
                 'card_picture' => 'http://www.littlehearts.ind.in/wp-content/themes/lhs/Birthday/images/adm.png',
                 'profile_picture' =>'http://www.littlehearts.ind.in/wp-content/themes/lhs/Birthday/images/adm.png',
                 'phone_number' => '87272727',
-                'role_id' => 2,
+                'users_type_id' => 2,
                 'password' => bcrypt('moderator'),
             ],
             [
@@ -45,7 +45,7 @@ class UsersTableSeeder extends Seeder
                 'card_picture' => 'http://sguru.org/wp-content/uploads/2017/06/cool-anonymous-profile-pictures-1699946_orig.jpg',
                 'profile_picture' =>'http://sguru.org/wp-content/uploads/2017/06/cool-anonymous-profile-pictures-1699946_orig.jpg',
                 'phone_number' => '87272727',
-                'role_id' => 3,
+                'users_type_id' => 3,
                 'password' => bcrypt('public'),
             ],
             [
@@ -57,7 +57,7 @@ class UsersTableSeeder extends Seeder
                 'card_picture' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd_nySYgvYJrWrRbDDBoo1izr89qHXzS_GujLRyi2JcrDv3QVmrQ',
                 'profile_picture' =>'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd_nySYgvYJrWrRbDDBoo1izr89qHXzS_GujLRyi2JcrDv3QVmrQ',
                 'phone_number' => '87272727',
-                'role_id' => 3,
+                'users_type_id' => 3,
                 'password' => bcrypt('supervisor'),
             ],
         ];

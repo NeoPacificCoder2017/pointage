@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->string('card_picture');
             $table->string('profile_picture');
             $table->string('phone_number');
-            $table->integer('role_id');
+            $table->integer('users_type_id');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
