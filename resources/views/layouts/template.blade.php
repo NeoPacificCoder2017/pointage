@@ -44,7 +44,7 @@
                       </a>
                       <ul class="navbar-nav mr-auto mt-1 mt-lg-0">
                         <li class="nav-item active">
-                          <a class="fa fa-bars fa-2x nav-link mt-2 " id="menu-toggle" href="#"></a>
+                          <a class="fa fa-bars fa-2x nav-link mt-1 " id="menu-toggle" href="#"></a>
                         </li>
                         <li class="nav-item">
                             <form class="form-inline nav-link my-2 my-lg-0">
@@ -56,14 +56,14 @@
                       </ul>
                       <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa-2x fa fa-bell-o"></i></a>
+                                <a class="nav-link" href="#"><i class=" fa fa-bell-o"></i></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fa fa-envelope-o fa-2x"></i></a>
+                                <a class="nav-link" href="#"><i class="fa fa-envelope-o "></i></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa-2x fa fa-user-o"></i>
+                                        <i class=" fa fa-user-o"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
@@ -92,10 +92,10 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa-2x fa fa-user-o"></i>  Elèves</a>
+                                <a href="#"><i class=" fa fa-user-o"></i>  Elèves</a>
                             </li>
                             <li>
-                                <a href="#"><i class="fa-2x fa fa-suitcase"></i>  Professeurs</a>
+                                <a href="#"><i class=" fa fa-suitcase"></i>  Professeurs</a>
                             </li>
             
                         </ul>

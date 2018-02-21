@@ -4,9 +4,9 @@
 {{ Auth::user()->last_name }} {{ Auth::user()->first_name }}
 @stop
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card card-default">
                 <div class="card-header">Dashboard</div>
 
